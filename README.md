@@ -12,7 +12,9 @@ Include javascript files to active_admin.js.coffee
   	#= require active_admin/admin_tag_input
 
 Create a .js file in app/assets/javascripts/active_admin called admin_tag_input.js
+
 - Example admin_tag_input.js file (replace ids with your own)
+
 
 	$(document).ready(function() {
 		$("#winery_region_ids").tokenInput("/admin/regions/autocomplete", {
