@@ -9,10 +9,7 @@ Credit goes to James Smith (http://loopj.com) for the jquery tokenInput plugin
 Add this line to the active_admin model file
 
 	ActiveAdmin.register Wine do
-	
-		#Where "Wine" is the model name
-		tag_autocomplete :collection => Wine 
-	
+		tag_autocomplete
 	end
 
 Add this to your activeadmin form partial
