@@ -1,0 +1,26 @@
+
+<%= javascript_include_tag "jquery.tokeninput"%>
+
+<% 
+	autocomplete_path = self.send("autocomplete_admin_#{collection.to_s}_path") if autocomplete_path.nil?
+	resource = form.object if resource.nil?
+%>
+
+<script>
+	$(document).ready(function() {
+	    $("#<%=collection.to_s%>_input").tokenInput("<%= autocomplete_path %>", {
+	    prePopulate: $("#<%=collection.to_s%>_input").data("pre"),
+	    allowCreate: true,
+	    preventDuplicates: true,
+	    theme: "facebook",
+	    parentInput: "#<%=collection.to_s%>_input",
+	    fieldName: "<%= resource.class.name.underscore %>[<%= collection.to_s.singularize%>_ids]"
+	    });
+	});
+</script>
+
+<%
+	@json = resource.send("#{collection}").map.to_json(:only => [:id, :name])
+%>
+
+<%= form.input collection, :as => :string, :input_html => { "data-pre" => @json, "id" => "#{collection.to_s}_input", "name" => "", "value" => nil} %>	
