@@ -7,11 +7,10 @@ require "active_admin_taginput/version"
 Gem::Specification.new do |s|
   s.name        = "active_admin_taginput"
   s.version     = ActiveAdminTaginput::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of ActiveAdminTaginput."
-  s.description = "TODO: Description of ActiveAdminTaginput."
+  s.authors     = ["William Porter"]
+  s.email       = ["willports@gmail.com"]
+  s.homepage    = "http://papercloud.com.au"
+  s.summary     = "Turn fields to a token autocomplete in active_admin"
 
   s.files = Dir["{vendor,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
 
