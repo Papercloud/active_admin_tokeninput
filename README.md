@@ -6,37 +6,22 @@ Credit goes to James Smith (http://loopj.com) for the jquery tokenInput plugin
 
 	gem 'active_admin_taginput' , github: 'Papercloud/active_admin_taginput'
 
-Include javascript files to active_admin.js.coffee
-
-	#= require jquery.tokeninput
-  	#= require active_admin/admin_tag_input
-
-Create a .js file in app/assets/javascripts/active_admin called admin_tag_input.js
-(Example admin_tag_input.js file - replace ids with your own)
-
-
-	$(document).ready(function() {
-		$("#winery_region_ids").tokenInput("/admin/regions/autocomplete", {
-		prePopulate: $("#winery_region_ids").data("pre"),
-		allowCreate: true,
-		preventDuplicates: true,
-		theme: "facebook",
-		parentInput: "#winery_regions_input",
-		fieldName: "winery[region_ids]"
-		});
-	});
-
 Add this line to the active_admin model file
 
 	ActiveAdmin.register Wine do
 	
-		#add this line where "Wine" is the model name
+		#Where "Wine" is the model name
 		tag_autocomplete :collection => Wine 
 	
 	end
 
-Add this to your activeadmin form
+Add this to your activeadmin form partial
+ 
+	<%= render 'active_admin/taginput', :form => f, :collection => :posts %> 
+	
+If you need to define your own autocomplete path
 
-      f.input :wines, :as => :string, :input_html => { "data-pre" => winery.wines.map().to_json(:only => [:id, :name]), "name" => "", "value" => nil} 
+	<%= render 'active_admin/taginput', :autocomplete_path => autocomplete_admin_posts_path, :form => f, :collection => :posts %> 
+
   
   
