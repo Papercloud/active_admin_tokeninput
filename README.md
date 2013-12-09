@@ -34,5 +34,9 @@ Add this line to the active_admin model file
 		tag_autocomplete :collection => Wine 
 	
 	end
+
+Add this to your activeadmin form
+
+      f.input :wines, :as => :string, :input_html => { "data-pre" => winery.wines.map().to_json(:only => [:id, :name]), "name" => "", "value" => nil} 
   
   
