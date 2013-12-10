@@ -602,7 +602,7 @@ $.TokenList = function (input, url_or_data, settings) {
         $('<input>').attr({
             type: 'hidden',
             id: "item_" + item.id,
-            name: escapeHTML($(input).data("settings").fieldName) + "[]",
+            name: escapeHTML($(input).data("settings").fieldName),
             value: item.id
         }).appendTo(escapeHTML($(input).data("settings").parentInput));
     }

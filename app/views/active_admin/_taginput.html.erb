@@ -2,7 +2,8 @@
 <%= javascript_include_tag "jquery.tokeninput"%>
 
 <% 
-	autocomplete_path = self.send("autocomplete_admin_#{collection.to_s}_path") if autocomplete_path.nil?
+	autocomplete_path = self.send("autocomplete_admin_#{collection.to_s.pluralize}_path") if autocomplete_path.nil?
+	belongs = false if belongs.nil?
 	resource = form.object if resource.nil?
 %>
 
@@ -14,13 +15,24 @@
 	    preventDuplicates: true,
 	    theme: "facebook",
 	    parentInput: "#<%=collection.to_s%>_input",
-	    fieldName: "<%= resource.class.name.underscore %>[<%= collection.to_s.singularize%>_ids]"
+	    <% if belongs == true %>
+	    fieldName: "<%= resource.class.name.underscore %>[<%= collection.to_s.singularize%>_id]",
+	    tokenLimit: 1
+	    <% else %>
+	    fieldName: "<%= resource.class.name.underscore %>[<%= collection.to_s.singularize%>_ids][]"
+	    <% end %>
 	    });
 	});
 </script>
 
 <%
-	@json = resource.send("#{collection}").map.to_json(:only => [:id, :name])
+	if belongs == true
+		@json = resource.send("#{collection}").to_json(:only => [:id, :name])
+		#surround with [] brackets to keep tokeninput.js happy
+		@json = "[#{@json}]"
+	else	
+		@json = resource.send("#{collection}").map.to_json(:only => [:id, :name])
+	end
 %>
 
 <%= form.input collection, :as => :string, :input_html => { "data-pre" => @json, "id" => "#{collection.to_s}_input", "name" => "", "value" => nil} %>	
