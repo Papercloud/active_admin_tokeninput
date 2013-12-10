@@ -1,4 +1,4 @@
-module ActiveAdminTaginput
+module ActiveAdminTokeninput
   module DSL
   	def tag_autocomplete(options={})
   		collection_action :autocomplete, :method => :get do

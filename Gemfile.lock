@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    active_admin_taginput (0.0.1)
+    active_admin_tokeninput (0.0.2)
       rails (~> 4.0.1)
 
 GEM
@@ -84,5 +84,5 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  active_admin_taginput!
+  active_admin_tokeninput!
   pg

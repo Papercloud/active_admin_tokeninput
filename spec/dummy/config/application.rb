@@ -8,7 +8,7 @@ require "sprockets/railtie"
 # require "rails/test_unit/railtie"
 
 Bundler.require(*Rails.groups)
-require "active_admin_taginput"
+require "active_admin_tokeninput"
 
 module Dummy
   class Application < Rails::Application

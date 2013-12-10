@@ -1,7 +1,7 @@
 //= require jquery.tokeninput
 
 $(document).ready(function() {
-	$("input.active-admin-taginput").each(function() {
+	$("input.active-admin-tokeninput").each(function() {
 		autocomplete_path = $(this).attr('data-autocomplete-path');
 		tokenLimit = $(this).attr('data-token-limit');
 		fieldName = $(this).attr('data-field-name');

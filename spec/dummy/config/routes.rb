@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
 
-  mount ActiveAdminTaginput::Engine => "/active_admin_taginput"
+  mount ActiveAdminTokeninput::Engine => "/active_admin_tokeninput"
 end

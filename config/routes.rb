@@ -1,2 +1,2 @@
-ActiveAdminTaginput::Engine.routes.draw do
+ActiveAdminTokeninput::Engine.routes.draw do
 end

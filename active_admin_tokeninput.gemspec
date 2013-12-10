@@ -1,12 +1,12 @@
 $:.push File.expand_path("../lib", __FILE__)
 
 # Maintain your gem's version:
-require "active_admin_taginput/version"
+require "active_admin_tokeninput/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
-  s.name        = "active_admin_taginput"
-  s.version     = ActiveAdminTaginput::VERSION
+  s.name        = "active_admin"
+  s.version     = ActiveAdminTokeninput::VERSION
   s.authors     = ["William Porter"]
   s.email       = ["willports@gmail.com"]
   s.homepage    = "http://papercloud.com.au"
