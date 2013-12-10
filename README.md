@@ -18,7 +18,7 @@ Add this to your activeadmin form if it's a has_many reationship
 	
 Otherwise if it's a belongs_to
 
-	f.input :posts, as: :belongs_to_token
+	f.input :author, as: :belongs_to_token
 
 If you need to define your own autocomplete path
 
