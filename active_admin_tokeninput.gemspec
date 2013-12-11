@@ -5,7 +5,7 @@ require "active_admin_tokeninput/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
-  s.name        = "active_admin"
+  s.name        = "active_admin_tokeninput"
   s.version     = ActiveAdminTokeninput::VERSION
   s.authors     = ["William Porter"]
   s.email       = ["willports@gmail.com"]
