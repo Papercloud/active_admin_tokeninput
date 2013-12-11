@@ -4,7 +4,7 @@ active_admin_tokeninput
 Credit goes to James Smith (http://loopj.com) for the jquery tokenInput plugin
 ## Installation
 
-	gem 'active_admin_taginput' , github: 'Papercloud/active_admin_tokeninput'
+	gem 'active_admin_taginput'
 
 Add this line to the active_admin model file, which sets up the autocomplete route. 
 
