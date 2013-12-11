@@ -1,4 +1,4 @@
-//= require jquery.pl.tokeninput
+//= require jquery.pc-tokeninput
 
 $(document).ready(function() {
 	$("input.active-admin-tokeninput").each(function() {

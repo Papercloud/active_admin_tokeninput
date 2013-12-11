@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.homepage    = "http://papercloud.com.au"
   s.summary     = "Turn fields to a token autocomplete in active_admin"
 
-  s.files = Dir["{vendor,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.files = Dir["{app,vendor,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
 
   s.add_dependency "rails", "~> 4.0.1"
 
