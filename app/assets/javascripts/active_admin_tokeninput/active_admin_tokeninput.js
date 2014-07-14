@@ -9,7 +9,6 @@ $(document).ready(function() {
 
 	    $(this).tokenInput(autocomplete_path, {
 		    prePopulate: $(this).data("pre"),
-		    allowCreate: true,
 		    preventDuplicates: true,
 		    theme: "facebook",
 		    parentInput: "#" + $(this).attr('id'),
