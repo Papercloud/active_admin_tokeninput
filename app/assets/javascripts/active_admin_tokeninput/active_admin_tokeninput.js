@@ -7,14 +7,15 @@ $(document).ready(function() {
 		fieldName = $(this).attr('data-field-name');
 
 
-	    $(this).tokenInput(autocomplete_path, {
-		    prePopulate: $(this).data("pre"),
-		    allowCreate: true,
-		    preventDuplicates: true,
-		    theme: "facebook",
-		    parentInput: "#" + $(this).attr('id'),
-		    fieldName: fieldName,
-		    tokenLimit: tokenLimit
-	    });
+		$(this).tokenInput(autocomplete_path, {
+			prePopulate: $(this).data("pre"),
+			allowCreate: true,
+			preventDuplicates: true,
+			theme: "facebook",
+			parentInput: "#" + $(this).attr('id'),
+			fieldName: fieldName,
+			tokenLimit: tokenLimit,
+			propertyToSearch: $(this).data("propertyToSearch")
+		});
 	});
-});	
+});
