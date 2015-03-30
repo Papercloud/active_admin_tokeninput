@@ -7,7 +7,7 @@ class HasManyTokenInput < Formtastic::Inputs::StringInput
 			"data-pre" => object.send("#{method}").map.to_json(:only => [:id, :name]),
 			"name" => "",
 			"value" => "",
-			"data-autocomplete-path" => options[:autocomplete_path] ||= Rails.application.routes.url_helpers.send("autocomplete_admin_#{method.to_s}_path")
+			"data-autocomplete-path" => options[:autocomplete_path] ||= Rails.application.routes.url_helpers.send("autocomplete_admin_#{method.to_s}_path"),
 			"data-propertyToSearch" => options[:search_property] ||= "name"
 			)
 	end
