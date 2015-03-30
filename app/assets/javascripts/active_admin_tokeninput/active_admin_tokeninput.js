@@ -15,7 +15,7 @@ $(document).ready(function() {
 			parentInput: "#" + $(this).attr('id'),
 			fieldName: fieldName,
 			tokenLimit: tokenLimit,
-			propertyToSearch: $(this).data("propertyToSearch")
+			propertyToSearch: $(this).data('property-to-search')
 		});
 	});
 });
