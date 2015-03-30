@@ -8,7 +8,7 @@ class HasManyTokenInput < Formtastic::Inputs::StringInput
 			"name" => "",
 			"value" => "",
 			"data-autocomplete-path" => options[:autocomplete_path] ||= Rails.application.routes.url_helpers.send("autocomplete_admin_#{method.to_s}_path"),
-			"data-propertyToSearch" => options[:search_property] ||= "name"
+			"data-property-to-search" => options[:search_property] ||= "name"
 			)
 	end
 end
