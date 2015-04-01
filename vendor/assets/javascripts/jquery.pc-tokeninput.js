@@ -21,7 +21,7 @@ var DEFAULT_SETTINGS = {
     queryParam: "q",
     searchDelay: 300,
     minChars: 1,
-    propertyToSearch: "name",
+    propertyToSearch: "index",
     jsonContainer: null,
     contentType: "json",
 
