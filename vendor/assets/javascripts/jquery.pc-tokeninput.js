@@ -6,9 +6,9 @@
  * Licensed jointly under the GPL and MIT licenses,
  * choose which one suits your project best!
  *
- * This is a modified version of the original and 
+ * This is a modified version of the original and
  * posts tokens as an array instead of a comma
- * seperated list. 
+ * seperated list.
  *
  * Can be found at https://github.com/Papercloud/jquery-tokeninput
  *
@@ -851,7 +851,7 @@ $.TokenList = function (input, url_or_data, settings) {
 
     var regexp_special_chars = new RegExp('[.\\\\+*?\\[\\^\\]$(){}=!<>|:\\-]', 'g');
     function regexp_escape(term) {
-        return term.replace(regexp_special_chars, '\\$&');
+        return term.toString().replace(regexp_special_chars, '\\$&');
     }
 
     // Highlight the query part of the search term
