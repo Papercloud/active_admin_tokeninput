@@ -6,7 +6,7 @@ module ActiveAdminTokeninput
       collection_action :autocomplete, :method => :get do
         attribute = options[:attribute] || "name"
 
-        collection = scoped_collection.where("#cast({attribute} as text) ILIKE ?", "%#{params[:q]}%")
+        collection = scoped_collection.where("cast(#{attribute} as text) ILIKE ?", "%#{params[:q]}%")
         collection = collection.order("lower(cast(#{attribute} as text)) ASC").limit(10)
         render :json => collection.as_json(:only => [:id, attribute.to_sym]), root: false
       end
