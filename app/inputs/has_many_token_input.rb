@@ -4,7 +4,7 @@ class HasManyTokenInput < Formtastic::Inputs::StringInput
 		search_property = options[:search_property] || "name"
 		super.merge(
 			"class" => "active-admin-tokeninput",
-			"data-field-name" => "#{object_name.underscore}[#{method.to_s.singularize}_ids][]",
+			"data-field-name" => "#{object_name.to_s.underscore}[#{method.to_s.singularize}_ids][]",
 			"data-pre" => options[:unscoped] == true ? nil : object.send("#{method}").map.to_json(:only => [:id, search_property.to_sym]),
 			"name" => "",
 			"value" => "",
